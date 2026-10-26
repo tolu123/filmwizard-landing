@@ -445,3 +445,20 @@ body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.0
 .niche-roll{vertical-align:top!important}
 .niche-track .niche-word{filter:none!important}
 .niche-track .niche-word:not(.on){opacity:0}
+/* step bar on phones: compact, swipeable, active node auto-centred */
+@media(max-width:760px){
+  .agent-section .agent-steps.node-flow{display:flex;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;margin:0 -20px!important;padding:6px 20px 18px;gap:0;
+    -webkit-mask:linear-gradient(90deg,transparent,#000 22px,#000 calc(100% - 22px),transparent);mask:linear-gradient(90deg,transparent,#000 22px,#000 calc(100% - 22px),transparent)}
+  .agent-section .agent-steps.node-flow::-webkit-scrollbar{display:none}
+  .agent-section .node-flow button{flex:0 0 auto;scroll-snap-align:center;padding:8px 11px 8px 8px;border-radius:12px;gap:7px}
+  .agent-section .node-label small{display:none}
+  .agent-section .node-label strong{font-size:12.5px}
+  .agent-section .node-num{flex-basis:22px;height:22px;font-size:10px}
+  .agent-section .node-arrow{flex:0 0 22px}.agent-section .node-arrow svg{width:18px}
+  .agent-section .node-social{flex:0 0 auto;padding-right:4px}
+  .agent-section .node-social .branch{width:22px;height:20px}
+  .agent-section .node-social .branch path:first-child,.agent-section .node-social .branch path:last-child{display:none}
+  .agent-section .node-social .soc{flex-direction:row;gap:6px}
+  .agent-section .node-social .soc i{width:30px;height:30px;border-radius:9px}
+  .agent-section .node-social .soc svg{width:16px;height:16px}
+}

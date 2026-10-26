@@ -424,3 +424,10 @@ body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.0
 .niche-track{display:flex;flex-direction:column;transition:transform .55s cubic-bezier(.2,.9,.25,1)}
 .niche-track .niche-word{height:1.2em;line-height:1.2em;position:static!important;transform:none!important;opacity:.25;filter:blur(3px);transition:opacity .4s,filter .4s}
 .niche-track .niche-word.on{opacity:1;filter:none}
+/* align sections with the hero and close the gap left by the removed strip */
+@media(min-width:1001px){
+  .section{max-width:1320px;padding-left:42px;padding-right:42px}
+  .hero.split-hero{padding-bottom:28px}
+  .agent-section{padding-top:52px}
+  .agent-section .agent-steps.node-flow{margin:0}
+}

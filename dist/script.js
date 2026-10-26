@@ -78,7 +78,7 @@ document.querySelectorAll('.post-stack').forEach(stackEl=>{const posts=[...stack
   setFront(0)});
 
 // Headline word reveal + staggered card entrance.
-if(!reduce()){document.querySelectorAll('.section-top h2, .simple-close h2').forEach(h=>{const walk=node=>[...node.childNodes].forEach(c=>{if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(w=>{if(!w.trim()){f.append(w);return}const o=document.createElement('span');o.className='w';const i=document.createElement('span');i.textContent=w;o.append(i);f.append(o)});c.replaceWith(f)}else if(c.nodeType===1&&c.tagName!=='BR')walk(c)});walk(h);h.querySelectorAll('.w>span').forEach((w,k)=>w.style.transitionDelay=k*70+'ms');h.classList.add('split')});
+if(!reduce()){document.querySelectorAll('.section-top h2, .simple-close h2').forEach(h=>{if(h.classList.contains('no-split'))return;const walk=node=>[...node.childNodes].forEach(c=>{if(c.nodeType===3){const f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(w=>{if(!w.trim()){f.append(w);return}const o=document.createElement('span');o.className='w';const i=document.createElement('span');i.textContent=w;o.append(i);f.append(o)});c.replaceWith(f)}else if(c.nodeType===1&&c.tagName!=='BR')walk(c)});walk(h);h.querySelectorAll('.w>span').forEach((w,k)=>w.style.transitionDelay=k*70+'ms');h.classList.add('split')});
   const ho=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ho.unobserve(e.target)}}),{threshold:.4});document.querySelectorAll('h2.split').forEach(h=>ho.observe(h));
   document.querySelectorAll('.reveal').forEach(el=>{if(!el.style.getPropertyValue('--i')){const sib=[...el.parentElement.children].filter(c=>c.classList.contains('reveal'));el.style.setProperty('--i',sib.indexOf(el))}});
   // 3D tilt + spotlight on cards
@@ -130,3 +130,12 @@ document.querySelectorAll('.reel-stack').forEach(stackEl=>{const cards=[...stack
 
 // nav links that open a hero slide
 document.querySelectorAll('[data-show-link]').forEach(a=>a.addEventListener('click',()=>selectShow(a.dataset.showLink)));
+
+// Examples heading: 0 → 100 count, niche slot-roll (one sliding strip), swoosh draw.
+(()=>{const head=document.querySelector('.ex-h');if(!head)return;const num=head.querySelector('.ex-num'),roll=document.querySelector('.niche-roll'),track=roll.querySelector('.niche-track'),words=[...track.children];let k=0;
+  const go=i=>{k=i;roll.style.width=words[k].getBoundingClientRect().width+'px';track.style.transform=`translateY(${-k*1.2}em)`;words.forEach((w,n)=>w.classList.toggle('on',n===k))};
+  const tick=()=>{if(k===words.length-1){track.style.transition='none';go(0);void track.offsetWidth;track.style.transition=''}setTimeout(()=>{go(k+1);setTimeout(tick,k===words.length-1?2600:1300)},40)};
+  go(0);
+  new IntersectionObserver((e,o)=>{if(!e[0].isIntersecting)return;o.disconnect();roll.classList.add('drawn');if(reduce())return;
+    let s;const step=t=>{s??=t;const p=Math.min(1,(t-s)/1400);num.textContent=p===1?100:Math.round(100*(1-Math.pow(2,-10*p)));if(p<1)requestAnimationFrame(step);else num.classList.add('pop')};num.textContent='0';requestAnimationFrame(step);setTimeout(()=>{num.textContent='100'},1600);
+    setTimeout(tick,1500)},{threshold:.6}).observe(head)})();

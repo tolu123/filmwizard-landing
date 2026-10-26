@@ -550,3 +550,10 @@ body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.0
 .rvl-more{border:0;background:none;color:#f4f2ee;font:inherit;font-size:14px;font-weight:600;padding:4px 0 0;cursor:pointer}
 .rvl-meta{margin-top:10px;font-size:13px;color:#8f8a84}.rvl-meta span{color:#4cc27a}
 @media(max-width:640px){.rvl{padding:20px 16px}.rvl-head h3{font-size:21px}.rvl-av{flex-basis:36px;height:36px;font-size:12px}.rvl-card{padding:14px 15px}.rvl-text{font-size:14px}}
+/* social icons: bare logos, no tile */
+.node-social .soc i,.node-social .soc .s-ig,.node-social .soc .s-tt,.node-social .soc .s-yt,.agent-section .node-social .soc i{background:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;width:auto!important;height:auto!important}
+.node-social .soc svg,.agent-section .node-social .soc svg{width:40px!important;height:40px!important;display:block}
+.agent-section .node-social .soc{gap:10px}
+.node-social.live .soc i{transform:scale(1.1);filter:drop-shadow(0 6px 14px #0009)}
+.node-social .soc i{opacity:.45}
+@media(max-width:760px){.agent-section .node-social .soc svg{width:30px!important;height:30px!important}}

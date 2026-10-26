@@ -134,7 +134,7 @@ document.querySelectorAll('[data-show-link]').forEach(a=>a.addEventListener('cli
 // Examples heading: 0 → 100 count, niche slot-roll (one sliding strip), swoosh draw.
 (()=>{const head=document.querySelector('.ex-h');if(!head)return;const num=head.querySelector('.ex-num'),roll=document.querySelector('.niche-roll'),track=roll.querySelector('.niche-track'),words=[...track.children];let k=0;
   const go=i=>{k=i;roll.style.width=words[k].getBoundingClientRect().width+'px';track.style.transform=`translateY(${-k*1.2}em)`;words.forEach((w,n)=>w.classList.toggle('on',n===k))};
-  const tick=()=>{if(k===words.length-1){track.style.transition='none';go(0);void track.offsetWidth;track.style.transition=''}setTimeout(()=>{go(k+1);setTimeout(tick,k===words.length-1?2600:1300)},40)};
+  const tick=()=>{if(k===words.length-1){track.style.transition='none';roll.style.transition='none';go(0);void track.offsetWidth;track.style.transition='';roll.style.transition=''}setTimeout(()=>{go(k+1);setTimeout(tick,1500)},40)};
   go(0);
   new IntersectionObserver((e,o)=>{if(!e[0].isIntersecting)return;o.disconnect();roll.classList.add('drawn');if(reduce())return;
     let s;const step=t=>{s??=t;const p=Math.min(1,(t-s)/1400);num.textContent=p===1?100:Math.round(100*(1-Math.pow(2,-10*p)));if(p<1)requestAnimationFrame(step);else num.classList.add('pop')};num.textContent='0';requestAnimationFrame(step);setTimeout(()=>{num.textContent='100'},1600);

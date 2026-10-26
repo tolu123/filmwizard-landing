@@ -431,3 +431,13 @@ body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.0
   .agent-section{padding-top:52px}
   .agent-section .agent-steps.node-flow{margin:0}
 }
+.niche-fixed{color:var(--orange)}
+.niche-track{align-items:flex-start}
+.niche-track .niche-word{width:max-content;background:linear-gradient(168deg,#fff,#ffb27a 70%,#ff7a3d);-webkit-background-clip:text;background-clip:text;color:transparent}
+.niche-roll{transition:width .5s cubic-bezier(.2,.9,.25,1);overflow:hidden;padding-bottom:.18em;height:1.38em;margin-bottom:-.18em}
+.niche-roll .swoosh{bottom:0;height:.28em}
+.niche-roll .swoosh path{stroke-dasharray:none;stroke-dashoffset:0;opacity:0;transition:opacity .6s .3s}
+.niche-roll.drawn .swoosh path{opacity:.9}
+.niche-roll{overflow:visible!important;height:auto!important;padding-bottom:0!important;margin-bottom:0!important;vertical-align:bottom}
+.niche-window{display:block;height:1.2em;overflow:hidden}
+.niche-roll .swoosh{position:absolute;left:0;right:0;bottom:-.24em;width:100%;height:.3em}

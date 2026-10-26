@@ -143,3 +143,8 @@ document.querySelectorAll('[data-show-link]').forEach(a=>a.addEventListener('cli
 // Workflow heading: words rise in, underline draws when it scrolls into view.
 (()=>{const h=document.querySelector('.flow-h');if(!h)return;h.querySelectorAll('.fw').forEach((w,i)=>w.style.setProperty('--i',i));if(reduce()){h.classList.add('lit');return}
   new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){h.classList.add('lit');o.disconnect()}},{threshold:.5}).observe(h)})();
+
+// Reviews: "See more" toggle; posting opens the FilmWizard review form (nothing is sent from this page).
+document.querySelectorAll('.rvl-more').forEach(b=>b.addEventListener('click',()=>{const t=b.previousElementSibling,open=t.classList.toggle('open');b.textContent=open?'See less':'See more'}));
+document.querySelectorAll('.rvl-write').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();window.open('https://filmwizard.ai/reviews','_blank','noopener')}));
+const fitMore=()=>document.querySelectorAll('.rvl-more').forEach(b=>{const t=b.previousElementSibling;if(t.classList.contains('open'))return;b.hidden=t.scrollHeight<=t.clientHeight+2});fitMore();addEventListener('resize',fitMore);

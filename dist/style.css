@@ -526,3 +526,4 @@ body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.0
 .node-num i{font-size:13px!important;font-weight:900;color:#ff7a3d!important}
 .node-flow button[aria-selected=true] .node-num b{color:#ff7a3d}
 .node-flow button{gap:8px!important}
+.node-flow .node-label{justify-content:center}.node-flow button{justify-content:center}

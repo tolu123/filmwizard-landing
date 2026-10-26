@@ -139,3 +139,7 @@ document.querySelectorAll('[data-show-link]').forEach(a=>a.addEventListener('cli
   new IntersectionObserver((e,o)=>{if(!e[0].isIntersecting)return;o.disconnect();roll.classList.add('drawn');if(reduce())return;
     let s;const step=t=>{s??=t;const p=Math.min(1,(t-s)/1400);num.textContent=p===1?100:Math.round(100*(1-Math.pow(2,-10*p)));if(p<1)requestAnimationFrame(step);else num.classList.add('pop')};num.textContent='0';requestAnimationFrame(step);setTimeout(()=>{num.textContent='100'},1600);
     setTimeout(tick,1500)},{threshold:.6}).observe(head)})();
+
+// Workflow heading: words rise in, underline draws when it scrolls into view.
+(()=>{const h=document.querySelector('.flow-h');if(!h)return;h.querySelectorAll('.fw').forEach((w,i)=>w.style.setProperty('--i',i));if(reduce()){h.classList.add('lit');return}
+  new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){h.classList.add('lit');o.disconnect()}},{threshold:.5}).observe(h)})();

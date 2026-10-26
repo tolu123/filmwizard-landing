@@ -35,7 +35,7 @@
 /* v6: icon rail + Wizard Agent dock */
 .side{width:64px;padding:16px 10px}
 .logo{margin:0 0 20px;display:flex;justify-content:center}.logo img{width:40px}
-.nav span{justify-content:center;padding:0;gap:0;font-size:0;height:38px}.nav span em{font-size:15px;width:auto;opacity:1}
+.nav span{justify-content:center;padding:0;gap:0;font-size:0;height:38px;color:#b9b4ad}.nav span em{font-size:17px;width:auto;opacity:1;line-height:1}.nav span.on{color:#fff}
 .pill{height:38px;left:2px;right:2px}
 .sep{margin:10px 4px}
 .credits{display:none}
@@ -140,7 +140,7 @@
 <div id="root" data-composition-id="studio" data-width="1200" data-height="650" data-start="0" data-duration="24">
 <aside class="side"><div class="logo"><img src="assets/fw-hat.png" alt="FilmWizard.ai"></div>
 <div class="nav" id="nav"><div class="pill" id="pill"></div>
-<span id="n0"><em>✦</em>Wizard Agent</span><span id="n1"><em>▦</em>Viral Templates</span><span id="n2"><em>⌕</em>Viral Finder</span><span id="n3"><em>◈</em>Generate</span><span id="n4"><em>▤</em>Timeline</span><span id="n5"><em>↗</em>Publish Content</span>
+<span id="n0"><em>✦</em>Wizard Agent</span><span id="n1"><em>▦</em>Viral Templates</span><span id="n2"><em style="font-size:22px">⌕</em>Viral Finder</span><span id="n3"><em>◈</em>Generate</span><span id="n4"><em>▤</em>Timeline</span><span id="n5"><em>↗</em>Publish Content</span>
 <div class="sep"></div><span><em>◎</em>AI Clone</span><span><em>⊞</em>Carousels</span><span><em>▶</em>Training</span></div>
 <div class="credits">Credits<strong id="credits">2,120 credits</strong></div></aside>
 <aside class="agent" id="agent"><div class="ag-head"><img src="assets/fw-agent.png" alt=""><span><strong>Wizard Agent</strong><small>Your content machine</small></span><span class="ag-state" id="agstate"><i id="agdot"></i><b id="agstatus">Ready</b></span></div>
@@ -208,7 +208,7 @@ gsap.set('#end',{opacity:0});
 // helpers: word-by-word blur in, blur swap between scenes on one stage
 const words=(sel,at,gap=.07)=>tl.fromTo(sel+' .w',{opacity:0,filter:'blur(8px)'},{opacity:1,filter:'blur(0px)',duration:.22,stagger:gap,ease:'power2.out'},at);
 const swap=(a,b,at)=>{tl.to(a,{opacity:0,filter:'blur(10px)',scale:.98,duration:.22,ease:'power3.in'},at);tl.fromTo(b,{opacity:0,filter:'blur(10px)',scale:1.03},{opacity:1,filter:'blur(0px)',scale:1,duration:.45,ease:'expo.out'},at+.16)};
-const nav=(i,at)=>{tl.to('#pill',{y:i*34,duration:.5,ease:'expo.out'},at);tl.set('#nav span',{attr:{class:''}},at+.05);tl.set('#n'+i,{attr:{class:'on'}},at+.05)};
+const nav=(i,at)=>{tl.to('#pill',{y:i*38,duration:.5,ease:'expo.out'},at);tl.set('#nav span',{attr:{class:''}},at+.05);tl.set('#n'+i,{attr:{class:'on'}},at+.05)};
 const click=(sel,at)=>tl.to(sel,{scale:.94,duration:.08,ease:'power2.in'},at).to(sel,{scale:1,duration:.35,ease:'back.out(2)'},at+.08);
 gsap.set('#n0',{attr:{class:'on'}});
 // cursor targets come from the real layout so the agent's clicks land on the right element

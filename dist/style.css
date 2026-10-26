@@ -398,3 +398,4 @@ body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.0
 @media(max-width:1280px){.agent-section .agent-steps.node-flow{margin:0}}
 @media(max-width:1000px){.agent-section .agent-steps.node-flow{overflow-x:auto;padding-bottom:16px}}
 .hero-slide .ige-head small{display:none}.hero-slide .ige-head a{font-size:8px;padding:3px 6px}.hero-slide .ige-head strong{font-size:10px}.hero-slide .remix-source{width:42%}
+.ex-niche{margin:6px 0 0;font-size:clamp(22px,2.6vw,32px);font-weight:600;letter-spacing:-.03em;color:#cfc9c1}.ex-niche span{color:var(--orange)}

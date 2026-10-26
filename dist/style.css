@@ -358,3 +358,43 @@ body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.0
 .section-cta.solid{background:linear-gradient(168deg,#ff3f13,#ee820e);border-color:transparent;padding-left:18px}.section-cta.solid i{background:#0003}
 .price-wrap{display:flex;align-items:center;gap:18px}
 @media(max-width:760px){.section-cta{margin-top:16px}.price-wrap{flex-wrap:wrap;gap:12px}}
+/* ===== hero slides (former feature cards) ===== */
+.show-dyn{position:absolute;inset:0}
+.hero-slide{position:absolute;inset:0;display:grid;grid-template-columns:42% 58%;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:hidden;
+  background:radial-gradient(60% 70% at 72% 50%,#ff5a1620,transparent 70%),radial-gradient(#ffffff14 1px,transparent 1.3px) 0 0/14px 14px,linear-gradient(180deg,#121214,#0b0b0c)!important;animation:slide-in .55s cubic-bezier(.2,.9,.25,1) both}
+.hero-slide[hidden]{display:none}
+@keyframes slide-in{from{opacity:0;filter:blur(8px);transform:scale(1.02)}}
+.hero-slide::after{content:"";position:absolute;inset:0;background:var(--grain);opacity:.1;mix-blend-mode:overlay;pointer-events:none}
+.slide-copy{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:6% 0 6% 8%}
+.hero-slide .card-title>span{font-size:9px;letter-spacing:1.6px}
+.hero-slide .card-title h3{font-size:clamp(18px,2vw,26px);margin:10px 0 6px;letter-spacing:-.03em;line-height:1.1}
+.hero-slide .card-sub{font-size:12px;min-height:0;color:#a9a39b}
+.hero-slide .card-foot{align-items:flex-start;min-height:0;margin:0}
+.hero-slide .stack-tabs{justify-content:flex-start}
+.hero-slide .stack-tabs button{font-size:10.5px;padding:5px 10px}
+.hero-slide .views-card .source-note,.hero-slide .source-note{text-align:left;font-size:9.5px}
+.slide-stage{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:4% 3%}
+.hero-slide .post-stack,.hero-slide .reel-stack{height:94%;width:100%}
+.hero-slide .post-stack .ig-post{width:min(178px,46%);top:2%}
+.hero-slide .reel-stack .view-card{width:min(168px,42%);top:2%}
+.hero-slide .reel-stack .view-count strong{font-size:18px}.hero-slide .reel-stack .view-meter{margin:5px 0 6px}
+.hero-slide .post-stack .ig-head{padding:7px 8px}.hero-slide .post-stack .ig-avatar{width:20px;height:20px}.hero-slide .post-stack .ig-foot{padding:6px 8px;font-size:10px}
+.hero-slide .remix-pair{width:100%;gap:10px;justify-content:center;align-items:center}
+.hero-slide .remix-source{width:38%}.hero-slide .remix-empty{width:30%;height:auto;aspect-ratio:9/14}
+.hero-slide .ig-embed .ige-media{aspect-ratio:9/11}
+.hero-slide .remix-source>a{font-size:9px;margin-top:6px;text-align:center}
+.hero-slide .remix-arrow{font-size:24px}
+@media(max-width:700px){.hero-slide{grid-template-columns:1fr;grid-template-rows:auto 1fr}.slide-copy{padding:5% 6% 0;gap:6px}.hero-slide .card-sub,.hero-slide .card-foot{display:none}.slide-stage{padding:2% 4% 4%}}
+/* step bar: standalone above the animation, wider, bigger socials */
+.agent-section .agent-steps.node-flow{background:none;border:0;padding:0 0 22px;margin:0 -40px;width:auto;overflow:visible}
+.agent-section .node-flow button{padding:11px 12px;border-radius:15px;background:#151517}
+.agent-section .node-label strong{font-size:13px}.agent-section .node-label small{font-size:10.5px}
+.agent-section .node-arrow{flex-basis:26px}.agent-section .node-arrow svg{width:22px}
+.agent-section .node-social{flex:0 0 auto;margin-left:2px}
+.agent-section .node-social .branch{width:40px;height:120px}
+.agent-section .node-social .soc{gap:8px}
+.agent-section .node-social .soc i{width:34px;height:34px;border-radius:11px}
+.agent-section .node-social .soc svg{width:19px;height:19px}
+@media(max-width:1280px){.agent-section .agent-steps.node-flow{margin:0}}
+@media(max-width:1000px){.agent-section .agent-steps.node-flow{overflow-x:auto;padding-bottom:16px}}
+.hero-slide .ige-head small{display:none}.hero-slide .ige-head a{font-size:8px;padding:3px 6px}.hero-slide .ige-head strong{font-size:10px}.hero-slide .remix-source{width:42%}

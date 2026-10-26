@@ -26,7 +26,7 @@
 .glint{position:absolute;inset:0;z-index:2;background:linear-gradient(105deg,transparent 35%,#ffffff55 50%,transparent 65%);background-size:250% 100%;background-position:150% 0;pointer-events:none}
 .hearts-burst{position:absolute;left:60px;top:24px;width:226px;height:452px;z-index:4;pointer-events:none}
 .heart{position:absolute;right:16px;bottom:120px;font-style:normal;font-size:20px;color:#ff3f5e;opacity:0;text-shadow:0 4px 12px #0008}
-.toast{position:absolute;right:326px;top:70px;z-index:22;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:14px;background:#161616ee;border:1px solid #ff5a1655;box-shadow:0 20px 50px -15px #000;opacity:0}
+.toast{position:absolute;right:26px;top:70px;z-index:22;display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:14px;background:#161616ee;border:1px solid #ff5a1655;box-shadow:0 20px 50px -15px #000;opacity:0}
 .toast b{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--grad);color:#fff;font-size:14px}
 .toast span{display:flex;flex-direction:column}.toast strong{font-size:14px}.toast small{font-size:11px;color:var(--muted)}
 .endlogo-wrap{position:relative;width:300px;margin-bottom:6px}.endlogo-wrap .endlogo{margin:0;width:100%}
@@ -60,6 +60,27 @@
 .cursor-wrap{position:absolute;left:0;top:0;z-index:30}
 .cursor-wrap .cursor{position:static;display:block}
 .cursor-tag{position:absolute;left:18px;top:24px;white-space:nowrap;font-size:10.5px;font-weight:700;color:#fff;padding:3px 8px;border-radius:6px 6px 6px 2px;background:var(--grad);box-shadow:0 6px 16px -6px #ff3f13}
+.agent{left:64px;right:auto;border-left:0;border-right:1px solid var(--line)}
+.top{left:364px!important;right:0!important}.stage{left:364px!important;right:0!important}
+/* script scene */
+#s-script{padding:30px 40px}
+.sdoc{position:absolute;left:40px;top:118px;width:470px;border-radius:16px;border:1px solid #2c2926;background:var(--panel);padding:16px 18px;box-shadow:0 30px 60px -30px #000}
+.sdoc-head{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--muted);padding-bottom:12px;border-bottom:1px solid var(--line);margin-bottom:6px}
+.sdoc-head b{color:#f4f2ee;font-weight:600;font-size:12px}
+.voice{font-size:10.5px;padding:4px 8px;border-radius:99px;background:#ff5a161a;border:1px solid #ff5a1655;color:#ffb27a}
+.sl{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px dashed #2a2724}
+.sl:last-child{border-bottom:0}
+.sl-beat{flex:0 0 74px}.sl-beat b{display:block;font-size:10.5px;letter-spacing:1.4px;color:var(--o2)}.sl-beat small{font-size:10px;color:var(--muted)}
+.sl-text{font-size:15px;font-weight:600;line-height:1.35;white-space:nowrap;display:flex;align-items:center}
+.sl-text span{display:inline-block;overflow:hidden;max-width:calc(var(--p,0)*100%)}
+.sl-text i{width:2px;height:17px;background:var(--o);margin-left:1px;opacity:0}
+.shots{position:absolute;left:532px;right:30px;top:118px}
+.shots .eyebrow{display:block;margin-bottom:10px}
+.shot{display:flex;gap:10px;align-items:center;padding:8px;border-radius:12px;border:1px solid #2c2926;background:#121212;margin-bottom:8px}
+.shot img{width:44px;height:56px;border-radius:8px;object-fit:cover}
+.shot b{display:block;font-size:11.5px}.shot small{font-size:10.5px;color:var(--muted);line-height:1.3;display:block}
+.sfoot{position:absolute;left:40px;bottom:30px;display:flex;gap:8px}
+.sfoot span{font-size:11.5px;padding:7px 12px;border-radius:99px;border:1px solid #2c2926;background:#121212;color:#cfc9c1}.sfoot span.ok{border-color:#ff5a1666;color:#fff;background:#ff5a161a}
 /* 1 prompt */
 #s-prompt{display:flex;flex-direction:column;align-items:center;padding-top:120px}
 .sugg{display:flex;gap:12px;margin-top:22px}.sugg span{font-size:13px;color:#cfcac3;padding:12px 16px;border-radius:12px;border:1px solid #2c2926;background:#121212}.sugg b{color:var(--o)}
@@ -137,14 +158,14 @@
 .cursor{position:absolute;left:0;top:0;width:26px;height:30px;z-index:30;filter:drop-shadow(0 4px 6px #000a)}
 .progress{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--o);transform-origin:left;z-index:40}
 </style></head><body>
-<div id="root" data-composition-id="studio" data-width="1200" data-height="650" data-start="0" data-duration="24">
+<div id="root" data-composition-id="studio" data-width="1200" data-height="650" data-start="0" data-duration="27">
 <aside class="side"><div class="logo"><img src="assets/fw-hat.png" alt="FilmWizard.ai"></div>
 <div class="nav" id="nav"><div class="pill" id="pill"></div>
-<span id="n0"><em>✦</em>Wizard Agent</span><span id="n1"><em>▦</em>Viral Templates</span><span id="n2"><em style="font-size:22px">⌕</em>Viral Finder</span><span id="n3"><em>◈</em>Generate</span><span id="n4"><em>▤</em>Timeline</span><span id="n5"><em>↗</em>Publish Content</span>
+<span id="n0"><em>✦</em>Wizard Agent</span><span id="n1"><em>▦</em>Viral Templates</span><span id="n2"><em>✎</em>Script</span><span id="n3"><em style="font-size:22px">⌕</em>Viral Finder</span><span id="n4"><em>◈</em>Generate</span><span id="n5"><em>▤</em>Timeline</span><span id="n6"><em>↗</em>Publish Content</span>
 <div class="sep"></div><span><em>◎</em>AI Clone</span><span><em>⊞</em>Carousels</span><span><em>▶</em>Training</span></div>
 <div class="credits">Credits<strong id="credits">2,120 credits</strong></div></aside>
 <aside class="agent" id="agent"><div class="ag-head"><img src="assets/fw-agent.png" alt=""><span><strong>Wizard Agent</strong><small>Your content machine</small></span><span class="ag-state" id="agstate"><i id="agdot"></i><b id="agstatus">Ready</b></span></div>
-<div class="ag-body"><div class="ag-user" id="aguser">Make a UGC ad for my Wizard headphones</div><div class="ag-think" id="agthink"><span class="w">On</span> <span class="w">it.</span> <span class="w">I’ll</span> <span class="w">find</span> <span class="w">a</span> <span class="w">format</span> <span class="w">that’s</span> <span class="w">working</span> <span class="w">right</span> <span class="w">now,</span> <span class="w">then</span> <span class="w">build</span> <span class="w">yours.</span></div><div class="ag-step" id="a1"><span class="ag-ic"><i class="spin" id="a1s"></i><i class="ok" id="a1k">✓</i></span><span class="ag-txt"><strong>Picking a viral template<em>Viral Templates</em></strong><small id="a1d">Product reveal · 1 of 100</small></span></div><div class="ag-step" id="a2"><span class="ag-ic"><i class="spin" id="a2s"></i><i class="ok" id="a2k">✓</i></span><span class="ag-txt"><strong>Scanning Viral Finder<em>Viral Finder</em></strong><small id="a2d">6 outliers found · top 20.7M</small></span></div><div class="ag-step" id="a3"><span class="ag-ic"><i class="spin" id="a3s"></i><i class="ok" id="a3k">✓</i></span><span class="ag-txt"><strong>Analysing the winner<em>Analyse</em></strong><small id="a3d">Hook, pacing and CTA extracted</small></span></div><div class="ag-step" id="a4"><span class="ag-ic"><i class="spin" id="a4s"></i><i class="ok" id="a4k">✓</i></span><span class="ag-txt"><strong>Writing script + shot list<em>Script</em></strong><small id="a4d">4 shots · 15 s · your brand voice</small></span></div><div class="ag-step" id="a5"><span class="ag-ic"><i class="spin" id="a5s"></i><i class="ok" id="a5k">✓</i></span><span class="ag-txt"><strong>Generating your clips<em>Generate</em></strong><small id="a5d">4 clips · your AI clone</small></span></div><div class="ag-step" id="a6"><span class="ag-ic"><i class="spin" id="a6s"></i><i class="ok" id="a6k">✓</i></span><span class="ag-txt"><strong>Editing on the timeline<em>Timeline</em></strong><small id="a6d">Captions, music, beat sync</small></span></div><div class="ag-step" id="a7"><span class="ag-ic"><i class="spin" id="a7s"></i><i class="ok" id="a7k">✓</i></span><span class="ag-txt"><strong>Publishing everywhere<em>Publish</em></strong><small id="a7d">Live on 3 platforms</small></span></div><div class="ag-done" id="agdone">Done ✓ Your ad is live on Instagram, TikTok and YouTube.</div></div><div class="ag-input">Ask Wizard to make another…</div></aside><div class="top"><span class="crumb">Projects / <strong>Wizard headphones launch</strong></span><span id="topstatus">Agent ready</span></div>
+<div class="ag-body"><div class="ag-user" id="aguser">Make a UGC ad for my Wizard headphones</div><div class="ag-think" id="agthink"><span class="w">On</span> <span class="w">it.</span> <span class="w">I’ll</span> <span class="w">find</span> <span class="w">a</span> <span class="w">format</span> <span class="w">that’s</span> <span class="w">working</span> <span class="w">right</span> <span class="w">now,</span> <span class="w">then</span> <span class="w">build</span> <span class="w">yours.</span></div><div class="ag-step" id="a1"><span class="ag-ic"><i class="spin" id="a1s"></i><i class="ok" id="a1k">✓</i></span><span class="ag-txt"><strong>Picking a viral template<em>Viral Templates</em></strong><small id="a1d">Product reveal · 1 of 100</small></span></div><div class="ag-step" id="a4"><span class="ag-ic"><i class="spin" id="a4s"></i><i class="ok" id="a4k">✓</i></span><span class="ag-txt"><strong>Writing the script<em>Script</em></strong><small id="a4d">4 beats · 4 shots · on brand</small></span></div><div class="ag-step" id="a2"><span class="ag-ic"><i class="spin" id="a2s"></i><i class="ok" id="a2k">✓</i></span><span class="ag-txt"><strong>Scanning Viral Finder<em>Viral Finder</em></strong><small id="a2d">6 outliers found · top 20.7M</small></span></div><div class="ag-step" id="a3"><span class="ag-ic"><i class="spin" id="a3s"></i><i class="ok" id="a3k">✓</i></span><span class="ag-txt"><strong>Analysing the winner<em>Analyse</em></strong><small id="a3d">Hook, pacing and CTA extracted</small></span></div><div class="ag-step" id="a5"><span class="ag-ic"><i class="spin" id="a5s"></i><i class="ok" id="a5k">✓</i></span><span class="ag-txt"><strong>Generating your clips<em>Generate</em></strong><small id="a5d">4 clips · your AI clone</small></span></div><div class="ag-step" id="a6"><span class="ag-ic"><i class="spin" id="a6s"></i><i class="ok" id="a6k">✓</i></span><span class="ag-txt"><strong>Editing on the timeline<em>Timeline</em></strong><small id="a6d">Captions, music, beat sync</small></span></div><div class="ag-step" id="a7"><span class="ag-ic"><i class="spin" id="a7s"></i><i class="ok" id="a7k">✓</i></span><span class="ag-txt"><strong>Publishing everywhere<em>Publish</em></strong><small id="a7d">Live on 3 platforms</small></span></div><div class="ag-done" id="agdone">Done ✓ Your ad is live on Instagram, TikTok and YouTube.</div></div><div class="ag-input">Ask Wizard to make another…</div></aside><div class="top"><span class="crumb">Projects / <strong>Wizard headphones launch</strong></span><span id="topstatus">Agent ready</span></div>
 <div class="stage"><div class="cam" id="cam">
 
 <section class="scene" id="s-prompt"><span class="eyebrow agent-eb"><img src="assets/fw-agent.png" alt="">WIZARD AGENT</span><h2 class="title"><span class="w">What</span> <span class="w">are</span> <span class="w">we</span> <span class="w hl">creating?</span></h2>
@@ -161,7 +182,10 @@
 <div class="tcard" id="t4"><img src="assets/m-car.jpg" alt=""><b>Day in my life</b></div>
 <div class="tcard" id="t5"><img src="assets/m-food.jpg" alt=""><b>Before &amp; after</b></div></div><div class="cats"><span class="on">All 100</span><span>Product reveals</span><span>Skits</span><span>Storytelling</span><span>Challenges</span><span>Educational</span><span>Before &amp; after</span></div></section>
 
-<section class="scene" id="s-an"><div class="finder" id="finder"><span class="eyebrow">VIRAL FINDER · PRODUCT ADS</span><h2 class="title" id="vftitle"><span class="w">What’s</span> <span class="w">blowing</span> <span class="w hl">up</span> <span class="w">right</span> <span class="w">now.</span></h2><div class="beam" id="beam"></div><div class="vfgrid"><div class="vf" id="vf0"><video class="clip" id="vfv0" data-start="4.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-test.jpg" src="assets/vf-biz-test.mp4"></video><span class="vf-user">@crushtestofficial</span><span class="vf-views">▶ <b id="vfn0">0</b>M</span><div class="ring" id="vfring"></div></div><div class="vf" id="vf1"><video class="clip" id="vfv1" data-start="4.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-fashion.jpg" src="assets/vf-biz-fashion.mp4"></video><span class="vf-user">@wantsandneedsbrand_</span><span class="vf-views">▶ <b id="vfn1">0</b>M</span></div><div class="vf" id="vf2"><video class="clip" id="vfv2" data-start="4.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-podcast.jpg" src="assets/vf-biz-podcast.mp4"></video><span class="vf-user">@vaibhavv.ai</span><span class="vf-views">▶ <b id="vfn2">0</b>M</span></div><div class="vf" id="vf3"><video class="clip" id="vfv3" data-start="4.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-drink.jpg" src="assets/vf-biz-drink.mp4"></video><span class="vf-user">@josie_ewing</span><span class="vf-views">▶ <b id="vfn3">0</b>M</span></div><div class="vf" id="vf4"><video class="clip" id="vfv4" data-start="4.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-talk.jpg" src="assets/vf-biz-talk.mp4"></video><span class="vf-user">@mikemancusi</span><span class="vf-views">▶ <b id="vfn4">0</b>M</span></div><div class="vf" id="vf5"><video class="clip" id="vfv5" data-start="4.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-ugc.jpg" src="assets/vf-biz-ugc.mp4"></video><span class="vf-user">@t.anstyyyy</span><span class="vf-views">▶ <b id="vfn5">0</b>M</span></div></div><div class="vfchips"><span class="on">Outliers 10×+</span><span>Last 30 days</span><span>Brands + creators</span><span>Reels</span><span>Sorted by views</span></div></div><div class="ref" id="ref"><video class="clip" id="refv" data-start="5.9" data-duration="2.95" muted playsinline preload="auto" poster="assets/vf-biz-test.jpg" src="assets/vf-biz-test.mp4"></video><div class="scan" id="scan"></div><span class="refviews">▶ <span id="refviews">20.7M</span> views</span></div>
+<section class="scene" id="s-script"><span class="eyebrow">SCRIPT · PRODUCT REVEAL TEMPLATE</span><h2 class="title" id="sctitle"><span class="w">Your</span> <span class="w">ad,</span> <span class="w hl">written.</span></h2>
+<div class="sdoc" id="sdoc"><div class="sdoc-head"><span><b>UGC ad · Wizard headphones</b> · 15 s</span><span class="voice">Brand voice: playful</span></div><div class="sl" id="sl0"><span class="sl-beat"><b>HOOK</b><small>0–2s</small></span><span class="sl-text"><span id="slt0">POV: headphones that finally stay on.</span><i id="slc0"></i></span></div><div class="sl" id="sl1"><span class="sl-beat"><b>PROBLEM</b><small>2–6s</small></span><span class="sl-text"><span id="slt1">Every pair I owned slipped off by rep two.</span><i id="slc1"></i></span></div><div class="sl" id="sl2"><span class="sl-beat"><b>PRODUCT</b><small>6–11s</small></span><span class="sl-text"><span id="slt2">Wizard. 40-hour battery. Zero slip.</span><i id="slc2"></i></span></div><div class="sl" id="sl3"><span class="sl-beat"><b>CTA</b><small>11–15s</small></span><span class="sl-text"><span id="slt3">Tap the link. Your mornings will thank you.</span><i id="slc3"></i></span></div></div>
+<div class="shots"><span class="eyebrow">SHOT LIST</span><div class="shot" id="sh0"><img src="assets/m-model.jpg" alt=""><span><b>Shot 1 · Selfie close-up</b><small>Golden light, wink to camera</small></span></div><div class="shot" id="sh1"><img src="assets/m-product.jpg" alt=""><span><b>Shot 2 · Product hero</b><small>Slow push, glowing W logo</small></span></div><div class="shot" id="sh2"><img src="assets/m-drive.jpg" alt=""><span><b>Shot 3 · UGC in the car</b><small>Handheld, real-life feel</small></span></div><div class="shot" id="sh3"><img src="assets/m-clone.jpg" alt=""><span><b>Shot 4 · Your AI clone</b><small>Talks the CTA to camera</small></span></div></div><div class="sfoot"><span id="sf0">32 words</span><span id="sf1">15 seconds</span><span class="ok" id="sf2">✓ On brand</span></div></section>
+<section class="scene" id="s-an"><div class="finder" id="finder"><span class="eyebrow">VIRAL FINDER · PRODUCT ADS</span><h2 class="title" id="vftitle"><span class="w">What’s</span> <span class="w">blowing</span> <span class="w hl">up</span> <span class="w">right</span> <span class="w">now.</span></h2><div class="beam" id="beam"></div><div class="vfgrid"><div class="vf" id="vf0"><video class="clip" id="vfv0" data-start="7.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-test.jpg" src="assets/vf-biz-test.mp4"></video><span class="vf-user">@crushtestofficial</span><span class="vf-views">▶ <b id="vfn0">0</b>M</span><div class="ring" id="vfring"></div></div><div class="vf" id="vf1"><video class="clip" id="vfv1" data-start="7.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-fashion.jpg" src="assets/vf-biz-fashion.mp4"></video><span class="vf-user">@wantsandneedsbrand_</span><span class="vf-views">▶ <b id="vfn1">0</b>M</span></div><div class="vf" id="vf2"><video class="clip" id="vfv2" data-start="7.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-podcast.jpg" src="assets/vf-biz-podcast.mp4"></video><span class="vf-user">@vaibhavv.ai</span><span class="vf-views">▶ <b id="vfn2">0</b>M</span></div><div class="vf" id="vf3"><video class="clip" id="vfv3" data-start="7.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-drink.jpg" src="assets/vf-biz-drink.mp4"></video><span class="vf-user">@josie_ewing</span><span class="vf-views">▶ <b id="vfn3">0</b>M</span></div><div class="vf" id="vf4"><video class="clip" id="vfv4" data-start="7.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-talk.jpg" src="assets/vf-biz-talk.mp4"></video><span class="vf-user">@mikemancusi</span><span class="vf-views">▶ <b id="vfn4">0</b>M</span></div><div class="vf" id="vf5"><video class="clip" id="vfv5" data-start="7.95" data-duration="3.9" muted playsinline preload="auto" poster="assets/vf-biz-ugc.jpg" src="assets/vf-biz-ugc.mp4"></video><span class="vf-user">@t.anstyyyy</span><span class="vf-views">▶ <b id="vfn5">0</b>M</span></div></div><div class="vfchips"><span class="on">Outliers 10×+</span><span>Last 30 days</span><span>Brands + creators</span><span>Reels</span><span>Sorted by views</span></div></div><div class="ref" id="ref"><video class="clip" id="refv" data-start="8.9" data-duration="2.95" muted playsinline preload="auto" poster="assets/vf-biz-test.jpg" src="assets/vf-biz-test.mp4"></video><div class="scan" id="scan"></div><span class="refviews">▶ <span id="refviews">20.7M</span> views</span></div>
 <div class="anpanel" id="anpanel"><span class="eyebrow">ANALYSING · @CRUSHTESTOFFICIAL</span><h2 class="title" id="whytitle"><span class="w">Why</span> <span class="w">it</span> <span class="w hl">works.</span></h2>
 <div class="meter"><div><span>Hook strength</span><em id="m0v">0%</em></div><i><b id="m0"></b></i></div>
 <div class="meter"><div><span>Pacing</span><em id="m1v">0%</em></div><i><b id="m1"></b></i></div>
@@ -202,7 +226,7 @@
 </div>
 <script>
 const tl=gsap.timeline({paused:true});
-const scenes=['#s-prompt','#s-tpl','#s-an','#s-gen','#s-edit','#s-pub'];
+const scenes=['#s-prompt','#s-tpl','#s-script','#s-an','#s-gen','#s-edit','#s-pub'];
 gsap.set(scenes.slice(1),{opacity:0});
 gsap.set('#end',{opacity:0});
 // helpers: word-by-word blur in, blur swap between scenes on one stage
@@ -241,10 +265,10 @@ tl.to('#s-tpl .tcard:not(#t1)',{opacity:.28,filter:'grayscale(1)',duration:.35,e
 tl.to('#t1',{scale:1.08,duration:.45,ease:'back.out(1.6)'},4.3);
 tl.fromTo('#tring',{opacity:0},{opacity:1,duration:.2},4.3);
 tl.fromTo('#cam',{scale:1,x:0,y:0},{scale:1.14,x:110,y:20,duration:.62,ease:'power2.inOut',immediateRender:false},4.33);
-tl.set('#cam',{scale:1,x:0,y:0},4.98);
+tl.set('#cam',{scale:1,x:0,y:0},4.93);
 
 // 5–9  ANALYSE (selected card carries across into the finder)
-nav(2,4.95);swap('#s-tpl','#s-an',4.95);
+nav(3,4.95);swap('#s-tpl','#s-an',4.95);
 gsap.set(['#ref','#anpanel'],{opacity:0});
 words('#vftitle',5.05,.06);
 tl.fromTo('#s-an .vfchips span',{opacity:0,y:10},{opacity:1,y:0,duration:.4,stagger:.05,ease:'expo.out'},5.3);
@@ -269,7 +293,7 @@ tl.fromTo('#s-an .beat',{opacity:0,y:14},{opacity:1,y:0,duration:.45,stagger:.1,
 tl.to('#s-an .beat',{borderColor:'#ff5a16',duration:.2,stagger:.25},7.6);
 tl.fromTo('#hookq',{opacity:0,filter:'blur(8px)'},{opacity:1,filter:'blur(0px)',duration:.3,ease:'power2.out'},7.9);
 
-nav(3,8.85);
+nav(4,8.85);
 tl.to('#s-an',{x:-160,opacity:0,filter:'blur(14px)',duration:.22,ease:'power3.in'},8.85);
 tl.fromTo('#s-gen',{x:180,opacity:0,filter:'blur(14px)'},{x:0,opacity:1,filter:'blur(0px)',duration:.45,ease:'expo.out'},9.0);
 words('#s-gen .title',9.05);
@@ -286,7 +310,7 @@ gsap.set('#s-gen .gcard img',{opacity:0});
 tl.to({n:2120},{n:2048,duration:1.6,ease:'power1.inOut',onUpdate(){document.getElementById('credits').textContent=Math.round(this.targets()[0].n).toLocaleString('en-US')+' credits'}},9.6);
 
 // 12–18  EDIT on the timeline
-nav(4,11.85);
+nav(5,11.85);
 tl.to('#s-gen .gcard',{x:(i)=>-83-i*193,y:(i)=>-147+i*65,scale:.18,opacity:0,filter:'blur(3px)',duration:.34,stagger:.04,ease:'power3.in'},11.72);
 tl.to('#s-gen .title,#s-gen .eyebrow,#s-gen .ringwrap',{opacity:0,duration:.2},11.8);
 tl.fromTo('#s-edit',{opacity:0,filter:'blur(0px)'},{opacity:1,duration:.3,ease:'power2.out'},12.02);
@@ -309,7 +333,7 @@ gsap.set(['#mon1','#mon2','#mon3'],{opacity:0});
 tl.fromTo('#cap .w',{opacity:0,y:10,scale:.8},{opacity:1,y:0,scale:1,duration:.25,stagger:.28,ease:'back.out(2.2)'},14.3);
 
 // 18–24  PUBLISH: the monitor becomes the phone
-nav(5,17.8);
+nav(6,17.8);
 tl.to('#s-edit',{opacity:0,filter:'blur(10px)',duration:.25,ease:'power3.in'},17.8);
 tl.fromTo('#s-pub',{opacity:0},{opacity:1,duration:.3},17.95);
 tl.fromTo('#phone',{x:247,y:-101,scaleX:1.77,scaleY:.55,borderRadius:14,filter:'blur(4px)'},{x:0,y:0,scaleX:1,scaleY:1,borderRadius:34,filter:'blur(0px)',duration:.75,ease:'expo.out'},17.95);
@@ -336,7 +360,7 @@ gsap.set(['#aguser','#agthink','.ag-step','#agdone'],{opacity:0});gsap.set('.ag-
 tl.fromTo('#aguser',{opacity:0,y:12,scale:.96},{opacity:1,y:0,scale:1,duration:.4,ease:'expo.out'},2.55);
 tl.fromTo('#agthink',{opacity:0},{opacity:1,duration:.2},2.85);
 tl.fromTo('#agthink .w',{opacity:0,filter:'blur(4px)'},{opacity:1,filter:'blur(0px)',duration:.15,stagger:.07,ease:'power2.out'},2.9);
-const STEPS=[['a1',3.0,4.5],['a2',4.95,5.95],['a3',6.0,8.2],['a4',8.3,8.9],['a5',9.0,11.6],['a6',11.85,17.6],['a7',17.8,20.6]];
+const STEPS=[['a1',3.0,4.5],['a2',4.95,5.95],['a3',6.0,8.6],['a5',9.0,11.6],['a6',11.85,17.6],['a7',17.8,20.6]];
 STEPS.forEach(([id,start,end])=>{
   tl.fromTo('#'+id,{opacity:0,y:10},{opacity:1,y:0,duration:.35,ease:'expo.out'},start);
   tl.fromTo('#'+id+'d',{opacity:0},{opacity:0,duration:.01},start);
@@ -350,8 +374,31 @@ STEPS.forEach(([id,start,end])=>{
 tl.to('#agthink',{opacity:.5,duration:.3},4.9);
 tl.fromTo('#agdone',{opacity:0,y:10},{opacity:1,y:0,duration:.45,ease:'expo.out'},20.85);
 tl.fromTo('#agdot',{opacity:1},{opacity:.25,duration:.4,repeat:25,yoyo:true,ease:'sine.inOut'},2.6);
-tl.to({},{duration:24,onUpdate(){const t=this.time();document.getElementById('agstatus').textContent=t<2.6?'Ready':t<20.85?'Working':'Done'}},0);
-tl.fromTo('#progress',{scaleX:0},{scaleX:1,duration:24,ease:'none'},0);
-tl.to({},{duration:24,onUpdate(){const t=this.time();document.getElementById('topstatus').textContent=t<2.6?'Agent ready':t<9?'Finding a format…':t<12?'Generating…':t<18?'Editing…':t<21?'Publishing…':'✓ Published'}},0);
+// ---- open a 3 s gap after the template beat for the Script beat ----
+tl.getChildren(false,true,true).forEach(c=>{if(c.startTime()>=4.945)c.startTime(c.startTime()+3)});
+// 4.95–7.95  SCRIPT: the agent writes the ad beat by beat, shots land beside each line
+nav(2,4.95);swap('#s-tpl','#s-script',4.95);
+words('#sctitle',5.05,.08);
+tl.fromTo('#sdoc',{opacity:0,y:24,scale:.97},{opacity:1,y:0,scale:1,duration:.55,ease:'expo.out'},5.05);
+tl.fromTo('#s-script .shots .eyebrow',{opacity:0},{opacity:1,duration:.3},5.2);
+[0,1,2,3].forEach(i=>{const t=5.35+i*.58;
+  tl.fromTo('#slc'+i,{opacity:0},{opacity:1,duration:.05},t);
+  tl.fromTo('#slt'+i,{'--p':0},{'--p':1,duration:.48,ease:'steps(30)'},t);
+  tl.to('#slc'+i,{opacity:0,duration:.05},t+.52);
+  tl.fromTo('#sl'+i+' .sl-beat',{opacity:.3},{opacity:1,duration:.2},t);
+  tl.fromTo('#sh'+i,{opacity:0,x:24,filter:'blur(6px)'},{opacity:1,x:0,filter:'blur(0px)',duration:.4,ease:'expo.out'},t+.18)});
+tl.fromTo('#s-script .sfoot span',{opacity:0,y:10},{opacity:1,y:0,duration:.35,stagger:.08,ease:'expo.out'},7.45);
+tl.to('#s-script',{opacity:0,filter:'blur(10px)',scale:.98,duration:.22,ease:'power3.in'},7.95);
+tl.fromTo('#a4',{opacity:0,y:10},{opacity:1,y:0,duration:.35,ease:'expo.out'},4.95);
+tl.fromTo('#a4d',{opacity:0},{opacity:0,duration:.01},4.95);
+tl.fromTo('#a4s',{rotation:0},{rotation:1080,duration:2.8,ease:'none'},4.95);
+tl.to('#a4',{borderColor:'#ff5a1666',background:'#ff5a160d',duration:.2},5.0);
+tl.to('#a4s',{opacity:0,duration:.1},7.75);
+tl.fromTo('#a4k',{opacity:0,scale:.4},{opacity:1,scale:1,duration:.35,ease:'back.out(2.4)'},7.75);
+tl.to('#a4',{borderColor:'#232120',background:'#121212',duration:.3},7.85);
+tl.to('#a4d',{opacity:1,duration:.25},7.8);
+tl.to({},{duration:27,onUpdate(){const t=this.time();document.getElementById('agstatus').textContent=t<2.6?'Ready':t<23.85?'Working':'Done'}},0);
+tl.fromTo('#progress',{scaleX:0},{scaleX:1,duration:27,ease:'none'},0);
+tl.to({},{duration:27,onUpdate(){const t=this.time();document.getElementById('topstatus').textContent=t<2.6?'Agent ready':t<4.95?'Picking a template…':t<7.95?'Writing the script…':t<11.85?'Finding a format…':t<14.85?'Generating…':t<20.8?'Editing…':t<24?'Publishing…':'✓ Published'}},0);
 window.__timelines=window.__timelines||{};window.__timelines.studio=tl;
 </script></body></html>

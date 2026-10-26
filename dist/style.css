@@ -519,3 +519,10 @@ body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.0
 }
 @media(prefers-reduced-motion:reduce){.flow-h .fw{opacity:1;transform:none;filter:none;transition:none}.swoosh2 path{stroke-dashoffset:0}}
 .flow-h .fw:not(.o){color:#f4f2ee!important;-webkit-text-fill-color:#f4f2ee;background:none}.flow-h{max-width:1240px!important}
+/* nodes: plain number / check, no badge box */
+.node-flow .node-num,.agent-section .node-num,.node-flow button[aria-selected=true] .node-num,.node-flow button.done .node-num,.agent-section .node-flow button.done .node-num{
+  background:none!important;border:0!important;box-shadow:none!important;flex:0 0 auto!important;width:auto;min-width:1.4em;height:auto!important;margin:0!important;padding:0;border-radius:0}
+.node-num b{font-size:12px;font-weight:700;color:#7d7871;font-variant-numeric:tabular-nums}
+.node-num i{font-size:13px!important;font-weight:900;color:#ff7a3d!important}
+.node-flow button[aria-selected=true] .node-num b{color:#ff7a3d}
+.node-flow button{gap:8px!important}

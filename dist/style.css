@@ -441,3 +441,7 @@ body::after{content:"";position:fixed;inset:0;background:var(--grain);opacity:.0
 .niche-roll{overflow:visible!important;height:auto!important;padding-bottom:0!important;margin-bottom:0!important;vertical-align:bottom}
 .niche-window{display:block;height:1.2em;overflow:hidden}
 .niche-roll .swoosh{position:absolute;left:0;right:0;bottom:-.24em;width:100%;height:.3em}
+.ex-niche{line-height:1.2em!important}
+.niche-roll{vertical-align:top!important}
+.niche-track .niche-word{filter:none!important}
+.niche-track .niche-word:not(.on){opacity:0}

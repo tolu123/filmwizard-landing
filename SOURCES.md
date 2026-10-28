@@ -87,3 +87,38 @@ PERMISSION NEEDED before publishing for all third-party pages.
 | AI films | @joseph.serrano.studios | https://www.instagram.com/reel/DekhvjZSh_9/ | 7,151,038 | AI short film |
 | AI films | @marimomovie | https://www.instagram.com/reel/DewHjHFyGhk/ | 6,608,344 | AI short film |
 | AI films | @liviaardenpictures | https://www.instagram.com/reel/Derwx-xRgXB/ | 4,392,920 | AI short film |
+
+## 28 Oct 2026 update: AI-only reels, no face-cam creators
+Removed real face-cam/talking-head creators (@vaibhavv.ai, @mikemancusi, @rourke x2, @henryhackslife, @sabrina_ramonov) from the Talking head tab and every third-party reel from card 03. Views are Instagram play_count on 28 Oct 2026, fetched while logged in.
+PERMISSION NEEDED before publishing for all third-party pages.
+### Card 03 "Get watched" (assets/reels/ai-*): AI UGC alternating with @filmwizard.ai
+| file | page | reel | views |
+|---|---|---|---|
+| ai-DYxPdG2J21-.mp4 | @ima_apriliani | https://www.instagram.com/reel/DYxPdG2J21-/ | 315,977 |
+| ai-Ded3p23BjYf.mp4 | @anastasiiasunny | https://www.instagram.com/reel/Ded3p23BjYf/ | 91,886 |
+| ai-DUnzECCEf79.mp4 | @imanoubou | https://www.instagram.com/reel/DUnzECCEf79/ | 72,917 |
+| ai-De4sCnAisKu.mp4 | @mariannunez_10 | https://www.instagram.com/reel/De4sCnAisKu/ | 68,192 |
+| ai-Dd60qOXNE_T.mp4 | @itszayramiray | https://www.instagram.com/reel/Dd60qOXNE_T/ | 110,834 |
+| ai-DbEW0hIOUVL.mp4 | @filmwizard.ai | https://www.instagram.com/reel/DbEW0hIOUVL/ | 49,784 |
+Plus the six fw-* reels above.
+### Examples "AI talking head" tab
+| page | reel | views | label |
+|---|---|---|---|
+| @thecreatorrmat | https://www.instagram.com/reel/DbowKcAOF_K/ | 483,968 | AI avatar explainer |
+| @aksarastrategy.ai | https://www.instagram.com/reel/De1ds2mSKMU/ | 171,312 | AI barista UGC |
+| @itszayramiray | https://www.instagram.com/reel/Dd60qOXNE_T/ | 110,834 | AI hair-care UGC |
+| @itszayramiray | https://www.instagram.com/reel/DekURcLtVtz/ | 120,090 | AI creator OOTD |
+| @imanoubou | https://www.instagram.com/reel/DUnzECCEf79/ | 72,917 | AI spokesperson ad |
+| @mariannunez_10 | https://www.instagram.com/reel/De4sCnAisKu/ | 68,192 | AI beauty GRWM |
+### Hero "Examples" trio: all @filmwizard.ai (fw-croc, DbEW0hIOUVL, fw-hammer). First slot is a stand-in until the rotoscope reel is chosen.
+### Carousels: 8 more @filmwizard.ai posts, stack order shuffled on every load
+DVg8EYiErgC (first 10 of 14 slides), DVJgmxREsU2, DVGktGAEStd, DU7f4cjkdAo, DdNS828jp8a, DV31nugGnZ4, DYkktIMGpal (slide 5 video), DUl4knzjvlN (4 video slides).
+
+## 28 Oct 2026 update 2: four example tabs, Lendon mixed in, Viral Finder cleaned
+Examples now has 4 live tabs (AI talking head, Models & fashion, Product ads, AI influencers) plus a faded, non-clickable row of more categories. "Made with FilmWizard", "Founders & brands" and "AI films" are gone; @filmwizard.ai reels are mixed into the 4 tabs.
+Removed everywhere: @wantsandneedsbrand_, @crushtestofficial, @selfmadeandsavvy, @zelci.co, @rose.shop.finds, @josie_ewing (examples), @t.anstyyyy (examples), @laurawgodfrey, the fw-croc and fw-robot reels. Card 03 now uses DR30vd3jjGJ and DTjt2A7Dh_V instead of croc/robot. Trio first slot is the roto reel DGzj8HxRXM6 (10,597,160 views).
+New third-party AI clips (PERMISSION NEEDED): @ai_visual_atelier DdI-CuAMnLg (600,887), @eslam_masoud_3d DZc6s0jIzpa (592,395), @mie.visuals DWweayPDFfG (227,681).
+New @filmwizard.ai clips: DR30vd3jjGJ (1,264,001), DTjt2A7Dh_V (2,947,424), DPFVw0wkrPz (307,244), DTQpIjAEhsn (257,357), DGzj8HxRXM6 (10,597,160).
+Motion graphic Viral Finder (dist/motion + ../studio-motion): crushtest, wantsandneeds, vaibhavv, mikemancusi tiles replaced by vf-ai-food (eslam_masoud_3d), vf-ai-fur (ai_visual_atelier), vf-ai-perfume (mie.visuals), vf-ai-owl (ima_apriliani). Headphone stills replaced with Kling 3.0 clips generated on Higgsfield from the DZOr4z1jjqd carousel slides; the Lendon cigar still (m-clone) is removed.
+Viral Finder winner (update 4): vf-ai-hp2 = @ai_.mayank https://www.instagram.com/reel/DemXu7TMZI6/ (625 views), AI headphone spec ad made with Seedance 2.5, 8.5–12.5 s. PERMISSION NEEDED.
+Hero copy (update 3) taken from https://filmwizard.ai/join: "Create 100 viral marketing videos", "Our AI formats go viral and make your brand look good.", "Cancel anytime in 1-click · Training included".
